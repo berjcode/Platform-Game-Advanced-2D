@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
         PlayerMoving();
         Jump();
         flip();
+        
     }
 
 
@@ -48,27 +49,29 @@ public class PlayerController : MonoBehaviour
     {
         if(Input.GetKeyDown("space"))
         {
+          
             rb.AddForce(new Vector2(0,jumpForce),ForceMode2D.Impulse);
-            JumpAnim();
+            
         }
     }
 
     #endregion
 
-
+/*
     #region Jump Animation
 
     private void JumpAnim()
     {
         if(horizontal != 0 )
         {
-            animator.SetBool("isJump",true);
+            animator.SetBool("isjump",true);
         }else{
-            animator.SetBool("isJump",false);
+            animator.SetBool("isjump",false);
         }
     }
 
     #endregion
+    */
 
     #region Run Animation
 
