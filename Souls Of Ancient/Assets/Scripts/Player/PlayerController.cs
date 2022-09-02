@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 movement;
     private Rigidbody2D rb;
     private bool isGrounded;
+    private bool attack;
 
     private SpriteRenderer _renderer;
     void Start()
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
         PlayerMoving();
         FlipMove();
         Jump();
+        FireAttack();
     }
 
 
@@ -62,9 +64,11 @@ public class PlayerController : MonoBehaviour
             if(isGrounded==true)
             {   
                 isGrounded=false;
+                
                 rb.AddForce(new Vector2(0,jumpForce),ForceMode2D.Impulse);
-                JumpAnimation();
+                
             }
+           // JumpAnimation();
             
         }
      }
@@ -106,10 +110,30 @@ public class PlayerController : MonoBehaviour
         if(col.gameObject.tag=="platform")
         {
             isGrounded =true;
+           
         }else
         {
             isGrounded =false;
+           
         }
     }
 
+
+    private void FireAttack()
+    {
+        
+        if(Input.GetMouseButton(0))
+        {
+           animator.SetBool("isAttack",true);
+           
+        }else
+        {
+             animator.SetBool("isAttack",false);
+           
+        }
+        
+        
+    }
+
+   
 }
