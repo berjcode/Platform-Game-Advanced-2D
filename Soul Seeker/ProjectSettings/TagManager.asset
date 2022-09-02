@@ -8,14 +8,14 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Background
   - Water
   - UI
-  - Player
+  - 
+  - 
   - Platform
-  - 
-  - 
-  - 
+  - Ground Hard
+  - Player
   - 
   - 
   - 
@@ -38,18 +38,27 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3936676035
+    locked: 0
+  - name: Near Background
+    uniqueID: 1988455705
+    locked: 0
+  - name: Cave
+    uniqueID: 222040141
+    locked: 0
+  - name: Platform
+    uniqueID: 1752682665
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
-    uniqueID: 3919910125
+  - name: Foreground
+    uniqueID: 1950422495
     locked: 0
-  - name: Platform
-    uniqueID: 3709435853
+  - name: Near Foreground
+    uniqueID: 2727812175
     locked: 0
   - name: Player
-    uniqueID: 408385727
-    locked: 0
-  - name: Foreground
-    uniqueID: 1954965665
+    uniqueID: 3598011367
     locked: 0
