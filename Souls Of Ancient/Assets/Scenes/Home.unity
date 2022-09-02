@@ -330,7 +330,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -968757097
   m_SortingLayer: 3
-  m_SortingOrder: 10
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 7f099e42c676e2c45b369705eb9aaf6a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -488,7 +488,7 @@ MonoBehaviour:
   rightBulletSpawner: {fileID: 1632648868}
   leftBullets: {fileID: 4515204622776656839, guid: 98dd1611e698f9f4a8b9cd673bf13c98, type: 3}
   rightBullets: {fileID: 656315155942754353, guid: 722ee72a2440f894f8ac6f54e4be7d6d, type: 3}
-  isLookingLeft: 0
+  isLookingLeft: 1
 --- !u!212 &1632648870
 SpriteRenderer:
   m_ObjectHideFlags: 0
