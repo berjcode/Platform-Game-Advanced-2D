@@ -95,11 +95,15 @@ public class PlayerController : MonoBehaviour
         if(Input.GetAxisRaw("Horizontal") > 0)
         {
             _renderer.flipX=false;
+            GunC.Instance.isLookingLeft =true;
+            
         }
         else if (Input.GetAxisRaw("Horizontal")<0)
 
         {
             _renderer.flipX = true;
+              GunC.Instance.isLookingLeft =false;
+            
         }
 
     }
@@ -128,7 +132,7 @@ public class PlayerController : MonoBehaviour
            
         }else
         {
-             animator.SetBool("isAttack",false);
+            animator.SetBool("isAttack",false);
            
         }
         
