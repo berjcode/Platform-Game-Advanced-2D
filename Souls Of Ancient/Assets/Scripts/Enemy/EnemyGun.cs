@@ -28,4 +28,6 @@ public class EnemyGun : MonoBehaviour
             nextFire = Time.time + fireRate;
         }
     }
+
+   
 }
