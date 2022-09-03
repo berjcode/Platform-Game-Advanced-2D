@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     private Vector2 movement;
     private Rigidbody2D rb;
-    private bool isGrounded;
+    private bool isGrounded=true;
     private bool attack;
 
     private SpriteRenderer _renderer;
@@ -28,17 +28,25 @@ public class PlayerController : MonoBehaviour
     {
         PlayerMoving();
         FlipMove();
-        Jump();
+        
         FireAttack();
+
+         if(Input.GetKeyDown("space"))
+         {
+            Jump();
+         }
+        
+            
     }
 
 
     private void PlayerMoving()
     {
         horizontal = Input.GetAxis("Horizontal");
+       
         WalkAnimation();
 
-        transform.position += new Vector3(horizontal,0,0)*Time.deltaTime*speedPlayer;
+       transform.position += new Vector3(horizontal,0,0)*Time.deltaTime*speedPlayer;
     }
 
     #region  Walk Animation 
@@ -59,8 +67,8 @@ public class PlayerController : MonoBehaviour
     #region  Jump
      private void Jump()
      {
-        if(Input.GetKeyDown("space"))
-        {
+       
+        
             if(isGrounded==true)
             {   
                 isGrounded=false;
@@ -70,7 +78,7 @@ public class PlayerController : MonoBehaviour
             }
            // JumpAnimation();
             
-        }
+        
      }
     #endregion
 
@@ -118,10 +126,25 @@ public class PlayerController : MonoBehaviour
         }else
         {
             isGrounded =false;
+        }
+
+         if(col.gameObject.tag=="Enemy")
+        {
+            isGrounded =true;
            
+        }
+        
+
+
+
+          if(col.gameObject.tag =="Enemy")
+        {
+           
+            Debug.Log("Dokundu");
         }
     }
 
+   
 
     private void FireAttack()
     {

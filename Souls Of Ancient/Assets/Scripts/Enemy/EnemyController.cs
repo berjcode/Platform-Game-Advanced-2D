@@ -28,6 +28,12 @@ public class EnemyController : MonoBehaviour
         {
             health--;
         }
+
+         if(col.tag =="Player")
+        {
+            Destroy(gameObject);
+            Debug.Log("Dokundu");
+        }
     }
 
 
@@ -39,4 +45,8 @@ public class EnemyController : MonoBehaviour
 
         }
     }
+
+    
+
+    
 }

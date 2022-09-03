@@ -17,10 +17,10 @@ public class EnemyBulletController : MonoBehaviour
 
     
 
-        Destroy(gameObject,0.5f);
+        Destroy(gameObject,1f);
     }
 
-     void OntriggerEnter2D(Collider2D col) 
+     void OnTriggerEnter2D(Collider2D col) 
     {
         if(col.tag =="Player")
         {
