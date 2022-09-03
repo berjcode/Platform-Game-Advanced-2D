@@ -165,14 +165,14 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 10
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -1248,7 +1248,7 @@ TextureImporter:
       TorchBase1: -6805859551083971301
       Pottery1: 7846451417021390320
       GrayPinkFish: 3275407576765064038
-      Candle7: -5682520854953723632
+      Flame2: -5111738877264174855
       Pottery8: 9097861789848553255
       Crystals5: 6723339952603699720
       BombOld: 3082405126085708043
@@ -1263,8 +1263,8 @@ TextureImporter:
       Flame3: 3927549165190998101
       OrangeFish: -174804484191063705
       Spikes4: -5123786616735696353
-      Flame2: -5111738877264174855
       Goblet1: 5554825445024860723
+      Candle7: -5682520854953723632
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
