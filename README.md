@@ -6,11 +6,11 @@
 Package:
 Universal RP
 
--Animations Completed +
--General Design Finish +
--2D Light System+
+-Animations Completed +                                                                                                                              
+-General Design Finish +                                                                                                               
+-2D Light System+                                                                                                            
 -Teleport System+
--Checkpoint System +
--Character Attack System+
--Enemy Attack System+
+-Checkpoint System +                                                                                                              
+-Character Attack System+  
+-Enemy Attack System+                                                                                                            
 
