@@ -11,7 +11,8 @@ public class Food : Item
 
     public override void UseEffect()
     {
-        Debug.Log("Yemek yedim.");
+        GameObject.FindGameObjectWithTag("GameManager").GetComponent<ScoreManager>().HealthPlayer+= doygunluk;
+       
     }
    
 }

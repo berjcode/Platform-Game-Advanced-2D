@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyBulletController : MonoBehaviour
 {
      public float speed;
+     
     void Start()
     {
         
@@ -25,6 +27,8 @@ public class EnemyBulletController : MonoBehaviour
         if(col.tag =="Player")
         {
             Destroy(gameObject);
+            ScoreManager.Instance.healthText.text = ScoreManager.Instance.HealthPlayer.ToString();
+            
         }
     }
 }

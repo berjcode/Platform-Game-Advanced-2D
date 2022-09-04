@@ -20,6 +20,11 @@ public class InventorySlot
     {
         amount += _amount;
     }
+
+    public void DecreaseAmount(int _amount)
+    {
+        amount -= _amount;
+    }
     public void UpdateSlot(int _id, Item _item, int _amount)
     {
          slotId = _id;

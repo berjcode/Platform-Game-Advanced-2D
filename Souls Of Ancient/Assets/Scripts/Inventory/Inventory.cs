@@ -27,8 +27,21 @@ public class Inventory : ScriptableObject
         }
     }
 
-    public void UseItem(InventorySlot slot)
+    public void UseItem(int index)
     {
-        slot.item.UseEffect();
+        if(itemSlot[index].slotId !=0)
+        {
+             itemSlot[index].item.UseEffect();
+            if(itemSlot[index].amount ==1)
+            {
+                
+                 itemSlot[index].UpdateSlot(0,null,0);
+            }else if(itemSlot[index].amount >1 )
+            {
+                itemSlot[index].DecreaseAmount(1);
+            }
+           
+        }
+        
     }
 }

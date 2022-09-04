@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
- public Animator animator;
-    
+
+    public static PlayerController Instance { get; private set; }
+    public void Awake()
+    {
+        Instance = this;
+    }
+    public Animator animator;
      private float vertical;
      private float horizontal;
     public float speedPlayer;
+    
     public float jumpForce;
+
+    public EnemyBulletController enemy;
     private Vector2 movement;
     private Rigidbody2D rb;
     private bool isGrounded=true;
@@ -30,6 +38,7 @@ public class PlayerController : MonoBehaviour
         FlipMove();
         
        FireAttack();
+       PlayerKill();
 
          if(Input.GetKey("space"))
          {
@@ -140,7 +149,8 @@ public class PlayerController : MonoBehaviour
           if(col.gameObject.tag =="Enemy")
         {
            
-            Debug.Log("Dokundu");
+             ScoreManager.Instance.HealthPlayer--;
+             ScoreManager.Instance.healthText.text = ScoreManager.Instance.HealthPlayer.ToString();
         }
     }
 
@@ -159,6 +169,16 @@ public class PlayerController : MonoBehaviour
            
         }
         
+        
+    }
+
+    private void PlayerKill()
+    {
+        if(ScoreManager.Instance.HealthPlayer==0)
+        {
+            Destroy(gameObject);
+        }
+
         
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
@@ -36,7 +37,13 @@ public class InventoryUI : MonoBehaviour
             if(_playerInventory.itemSlot[i].slotId != 0)
             {
                 slotObject[i].GetComponent<Image>().sprite =_playerInventory.itemSlot[i].item.Icon;
-            }
+                slotObject[i].GetComponentInChildren<Text>().text =_playerInventory.itemSlot[i].amount.ToString();
+           }
+           else
+           {
+            slotObject[i].GetComponent<Image>().sprite = null;
+            slotObject[i].GetComponentInChildren<Text>().text =" ";
+           }
             
             
             
@@ -55,15 +62,17 @@ public class InventoryUI : MonoBehaviour
            {
              
             obj.GetComponent<Image>().sprite = _playerInventory.itemSlot[i].item.Icon;
-           
+
            }
-           obj.GetComponent<Button>().onClick.AddListener(delegate{_playerInventory.UseItem(_playerInventory.itemSlot[i]);
+           slotObject[i] = obj;
+           obj.GetComponent<Button>().onClick.AddListener(delegate{_playerInventory.UseItem(Array.IndexOf(slotObject,obj));
            });
-            slotObject[i] = obj;
+
+            
         }
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
         WorldItem item = col.gameObject.GetComponent<WorldItem>();
         if(item != null)
