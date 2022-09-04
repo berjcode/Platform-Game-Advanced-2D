@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
-    public Animator animator;
+ public Animator animator;
+    
      private float vertical;
      private float horizontal;
     public float speedPlayer;
@@ -24,14 +24,14 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         PlayerMoving();
         FlipMove();
         
-        FireAttack();
+       FireAttack();
 
-         if(Input.GetKeyDown("space"))
+         if(Input.GetKey("space"))
          {
             Jump();
          }
@@ -144,14 +144,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-   
-
+        
     private void FireAttack()
     {
         
         if(Input.GetMouseButton(0))
         {
            animator.SetBool("isAttack",true);
+          
            
         }else
         {
