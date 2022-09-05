@@ -18,6 +18,7 @@ public class EnemyController : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position,playerPos.position,speed*Time.deltaTime);
         Killer();
+        Destroy(gameObject,10f);
     }
 
 
