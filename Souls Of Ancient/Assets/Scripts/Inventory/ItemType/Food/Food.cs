@@ -7,11 +7,12 @@ public class Food : Item
 {
     public ItemType itemType = ItemType.Food;
 
-    public float doygunluk;
+    public float  saturation;
 
     public override void UseEffect()
     {
-        GameObject.FindGameObjectWithTag("GameManager").GetComponent<ScoreManager>().HealthPlayer+= doygunluk;
+        GameObject.FindGameObjectWithTag("GameManager").GetComponent<ScoreManager>().HungerPlayer+= saturation;
+         ScoreManager.Instance.hungerText.text = ScoreManager.Instance.HungerPlayer.ToString();
        
     }
    

@@ -10,16 +10,9 @@ public class ScoreManager : MonoBehaviour
     {
         Instance = this;
     }
-    public float HealthPlayer =100;
-   public Text healthText;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public int HealthPlayer =100;
+    public Text healthText;
+    public float HungerPlayer=100;
+   public Text hungerText;
+   
 }

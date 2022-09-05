@@ -17,4 +17,4 @@ MonoBehaviour:
   Name: Bread
   stackable: 1
   itemType: 0
-  doygunluk: 2
+  saturation: 10

@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Inventory
   m_EditorClassIdentifier: 
   itemSlot:
-  - slotId: 0
-    item: {fileID: 0}
-    amount: 0
-  - slotId: 0
-    item: {fileID: 0}
-    amount: 0
+  - slotId: 2
+    item: {fileID: 11400000, guid: 42c3cc861d2ba3e418ff2939a85057e3, type: 2}
+    amount: 4
+  - slotId: 1
+    item: {fileID: 11400000, guid: 60c2707fbf83c254a946f0af513537a3, type: 2}
+    amount: 1
   - slotId: 0
     item: {fileID: 0}
     amount: 0

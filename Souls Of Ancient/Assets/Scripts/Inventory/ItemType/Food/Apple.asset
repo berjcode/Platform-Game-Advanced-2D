@@ -17,4 +17,4 @@ MonoBehaviour:
   Name: Apple
   stackable: 1
   itemType: 0
-  doygunluk: 1
+  saturation: 10

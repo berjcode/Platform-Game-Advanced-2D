@@ -11,6 +11,7 @@ public class Potion : Item
    public override void UseEffect()
    {
     GameObject.FindGameObjectWithTag("GameManager").GetComponent<ScoreManager>().HealthPlayer+= health;
+     ScoreManager.Instance.healthText.text = ScoreManager.Instance.HealthPlayer.ToString();
    }
    
 }
