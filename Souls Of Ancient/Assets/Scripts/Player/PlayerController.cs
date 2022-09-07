@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private bool isGrounded=true;
     private bool attack;
+    
 
     private SpriteRenderer _renderer;
     void Start()
@@ -43,6 +44,7 @@ public class PlayerController : MonoBehaviour
          if(Input.GetKey("space"))
          {
             Jump();
+             animator.SetBool("isWalk",false);
          }
         
             
@@ -81,6 +83,7 @@ public class PlayerController : MonoBehaviour
             if(isGrounded==true)
             {   
                 isGrounded=false;
+                
                 
                 rb.AddForce(new Vector2(0,jumpForce),ForceMode2D.Impulse);
                 
@@ -180,7 +183,12 @@ public class PlayerController : MonoBehaviour
         }
 
         
+
     }
+
+    #region  AttackSecond
+   
+    #endregion
 
     
 
