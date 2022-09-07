@@ -14,6 +14,7 @@ public class InventoryUI : MonoBehaviour
     public Item item;
     public int currentItemIndex;
     public Item currentItem;
+    public GameObject WorldItemPrefab;
 
     void Start()
     {
@@ -92,10 +93,18 @@ public class InventoryUI : MonoBehaviour
     }
     public void UseItemBtn()
     {
-
+        _playerInventory.UseItem(currentItemIndex);
     }
      public void DropItemBtn()
     {
-        
+        Instantiate(WorldItemPrefab,transform.position,Quaternion.identity,null);
+         if(_playerInventory.itemSlot[currentItemIndex].amount ==1)
+            {
+                
+                _playerInventory.itemSlot[currentItemIndex].UpdateSlot(0,null,0);
+            }else if(_playerInventory.itemSlot[currentItemIndex].amount >1 )
+            {
+                _playerInventory.itemSlot[currentItemIndex].DecreaseAmount(1);
+            }
     }
 }

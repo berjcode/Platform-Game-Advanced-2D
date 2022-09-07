@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public GameObject InventoryPanel;
+     public GameObject InventorySellPanel;
     void Start()
     {
         
@@ -21,9 +22,11 @@ public class GameManager : MonoBehaviour
          if(Input.GetKey(KeyCode.Tab))
          {
             InventoryPanel.SetActive(true);
+            InventorySellPanel.SetActive(true);
          }else
           {
             InventoryPanel.SetActive(false);
+            InventorySellPanel.SetActive(false);
           }
     }
 }
