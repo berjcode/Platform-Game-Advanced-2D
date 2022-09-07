@@ -12,6 +12,8 @@ public class InventoryUI : MonoBehaviour
     public GameObject slotPrefab;
     public GameObject _inventoryPanel;
     public Item item;
+    public int currentItemIndex;
+    public Item currentItem;
 
     void Start()
     {
@@ -65,7 +67,7 @@ public class InventoryUI : MonoBehaviour
 
            }
            slotObject[i] = obj;
-           obj.GetComponent<Button>().onClick.AddListener(delegate{_playerInventory.UseItem(Array.IndexOf(slotObject,obj));
+           obj.GetComponent<Button>().onClick.AddListener(delegate{SelectItem(Array.IndexOf(slotObject,obj));
            });
 
             
@@ -80,5 +82,20 @@ public class InventoryUI : MonoBehaviour
             _playerInventory.AddItem(item._item,item.amount);
             Destroy(item.gameObject);
         }
+    }
+
+    public void SelectItem(int index)
+    {
+        currentItemIndex = index;
+        currentItem= _playerInventory.itemSlot[index].item;
+        
+    }
+    public void UseItemBtn()
+    {
+
+    }
+     public void DropItemBtn()
+    {
+        
     }
 }

@@ -28,6 +28,7 @@ public class EnemyController : MonoBehaviour
         if(col.tag =="Bullet")
         {
             health--;
+           
         }
 
          if(col.tag =="Player")
