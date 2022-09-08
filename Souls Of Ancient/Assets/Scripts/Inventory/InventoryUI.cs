@@ -93,12 +93,22 @@ public class InventoryUI : MonoBehaviour
     }
     public void UseItemBtn()
     {
-        _playerInventory.UseItem(currentItemIndex);
+        if(currentItem !=null)
+        {
+               
+          _playerInventory.UseItem(currentItemIndex);
+          if(_playerInventory.itemSlot[currentItemIndex].item == null)
+          {
+            currentItem =null;
+          }
+        }
+       
     }
      public void DropItemBtn()
     {
-        
-         GameObject wrldItem=  Instantiate(WorldItemPrefab,transform.position,Quaternion.identity,null);
+        if(currentItem != null)
+         {
+             GameObject wrldItem=  Instantiate(WorldItemPrefab,transform.position,Quaternion.identity,null);
           wrldItem.GetComponent<WorldItem>()._item = _playerInventory.itemSlot[currentItemIndex].item;
          if(_playerInventory.itemSlot[currentItemIndex].amount ==1)
             {
@@ -108,6 +118,13 @@ public class InventoryUI : MonoBehaviour
             {
                 _playerInventory.itemSlot[currentItemIndex].DecreaseAmount(1);
             }
+            if(_playerInventory.itemSlot[currentItemIndex].item == null)
+          {
+            currentItem =null;
+          }
+
+         }
+         
          
     }
 }

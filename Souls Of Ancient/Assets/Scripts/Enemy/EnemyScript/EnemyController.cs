@@ -5,8 +5,9 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public float speed;
+    public GameObject DropPrefabs;
     private Transform playerPos;
-
+    
     private int health=5;
     void Start()
     {
@@ -43,12 +44,16 @@ public class EnemyController : MonoBehaviour
     {
         if(health ==0)
         {
-            Destroy(gameObject);
+            
+            Death();
 
         }
     }
 
     
-
-    
+    public void Death()
+    {
+        Instantiate(DropPrefabs,transform.position,Quaternion.identity,null);
+        Destroy(gameObject);
+    }  
 }

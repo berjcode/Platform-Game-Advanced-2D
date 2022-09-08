@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  DropPrefabs: {fileID: 5243785437812202147, guid: b99bfbb7fa7eecb48b6297d10d0bdb31, type: 3}
 --- !u!95 &8865939648535461419
 Animator:
   serializedVersion: 4
