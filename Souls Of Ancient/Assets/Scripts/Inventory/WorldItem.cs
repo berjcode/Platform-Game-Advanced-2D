@@ -15,7 +15,7 @@ public class WorldItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.GetComponent<Image>().sprite = _item.Icon;
+        this.GetComponent<SpriteRenderer>().sprite = _item.Icon;
         
     }
 }
