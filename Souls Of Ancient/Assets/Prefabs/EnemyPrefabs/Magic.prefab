@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5243785437812202144}
   - component: {fileID: 5243785437812202145}
   - component: {fileID: 5243785437812202146}
-  - component: {fileID: 16614199346072749}
+  - component: {fileID: -3433707152641476948}
   m_Layer: 7
   m_Name: Magic
   m_TagString: Coin
@@ -112,7 +112,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.09, y: 4.09}
   m_EdgeRadius: 0
---- !u!114 &16614199346072749
+--- !u!114 &-3433707152641476948
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,4 +124,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a846514e560ee4da194350d0386ed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 5

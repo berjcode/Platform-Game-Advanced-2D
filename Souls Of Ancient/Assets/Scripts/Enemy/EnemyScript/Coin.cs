@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    public int value;
-    void Start()
+    
+
+    void OnTriggerEnter2D(Collider2D col)
+    
     {
-        
+         if(col.gameObject.tag=="Player")
+            {
+                ScoreManager.Instance.HealthPlayer += Random.Range(0,15);
+             
+                Destroy(gameObject);
+            }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

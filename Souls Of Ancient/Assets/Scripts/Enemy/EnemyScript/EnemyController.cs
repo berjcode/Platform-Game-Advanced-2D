@@ -19,7 +19,7 @@ public class EnemyController : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position,playerPos.position,speed*Time.deltaTime);
         Killer();
-        Destroy(gameObject,10f);
+        Destroy(gameObject,20f);
     }
 
 
@@ -37,6 +37,7 @@ public class EnemyController : MonoBehaviour
             Destroy(gameObject);
             Debug.Log("Dokundu");
         }
+       
     }
 
 
@@ -53,8 +54,8 @@ public class EnemyController : MonoBehaviour
     
     public void Death()
     {
-       GameObject coin = Instantiate(DropPrefabs,transform.position,Quaternion.identity,null);
-        coin.GetComponent<Coin>().value = Random.Range(1,15);
+       Instantiate(DropPrefabs,transform.position,Quaternion.identity,null);
+       
         Destroy(gameObject);
     }  
 }

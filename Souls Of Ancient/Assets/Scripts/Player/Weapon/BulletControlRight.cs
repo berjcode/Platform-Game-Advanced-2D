@@ -24,7 +24,7 @@ public class BulletControlRight : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.tag =="enemy")
+        if(col.tag =="Enemy")
         {
             Destroy(gameObject);
         }
