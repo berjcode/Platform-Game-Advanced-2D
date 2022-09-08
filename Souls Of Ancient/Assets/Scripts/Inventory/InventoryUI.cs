@@ -75,10 +75,10 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerStay2D(Collider2D col)
     {
         WorldItem item = col.gameObject.GetComponent<WorldItem>();
-        if(item != null)
+        if(item != null && Input.GetKeyDown(KeyCode.E))
         {
             _playerInventory.AddItem(item._item,item.amount);
             Destroy(item.gameObject);
@@ -97,7 +97,7 @@ public class InventoryUI : MonoBehaviour
     }
      public void DropItemBtn()
     {
-        Instantiate(WorldItemPrefab,transform.position,Quaternion.identity,null);
+        
          if(_playerInventory.itemSlot[currentItemIndex].amount ==1)
             {
                 
@@ -106,5 +106,7 @@ public class InventoryUI : MonoBehaviour
             {
                 _playerInventory.itemSlot[currentItemIndex].DecreaseAmount(1);
             }
+          GameObject wrldItem=  Instantiate(WorldItemPrefab,transform.position,Quaternion.identity,null);
+          wrldItem.GetComponent<WorldItem>()._item = _playerInventory.itemSlot[currentItemIndex].item;
     }
 }

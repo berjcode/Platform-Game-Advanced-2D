@@ -8226,7 +8226,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 42c3cc861d2ba3e418ff2939a85057e3, type: 2}
   currentItemIndex: 0
   currentItem: {fileID: 0}
-  WorldItemPrefab: {fileID: 1559810441897381229, guid: 974215532a3e1ad44a16d80b24f2593c, type: 3}
+  WorldItemPrefab: {fileID: 1559810441897381229, guid: 1facb732a346c43409bca942cce6938b, type: 3}
 --- !u!1 &1435776074
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,11 +10,12 @@ public class WorldItem : MonoBehaviour
    
     void Start()
     {
-        this.GetComponent<Image>().sprite= _item.Icon;
+        
     }
     // Update is called once per frame
     void Update()
     {
+        this.GetComponent<Image>().sprite = _item.Icon;
         
     }
 }
