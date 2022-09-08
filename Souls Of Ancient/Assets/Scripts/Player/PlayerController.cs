@@ -155,6 +155,18 @@ public class PlayerController : MonoBehaviour
              ScoreManager.Instance.HealthPlayer--;
              ScoreManager.Instance.healthText.text = ScoreManager.Instance.HealthPlayer.ToString();
         }
+
+          
+            
+                
+            
+            
+            
+           
+            
+           
+        
+
     }
 
         

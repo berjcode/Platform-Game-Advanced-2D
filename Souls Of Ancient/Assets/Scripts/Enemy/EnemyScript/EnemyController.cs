@@ -53,7 +53,8 @@ public class EnemyController : MonoBehaviour
     
     public void Death()
     {
-        Instantiate(DropPrefabs,transform.position,Quaternion.identity,null);
+       GameObject coin = Instantiate(DropPrefabs,transform.position,Quaternion.identity,null);
+        coin.GetComponent<Coin>().value = Random.Range(1,15);
         Destroy(gameObject);
     }  
 }

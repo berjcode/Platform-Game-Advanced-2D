@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Bullet
   - GameManager
+  - Coin
   layers:
   - Default
   - TransparentFX
