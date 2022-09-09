@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34be3fbc38a96994faa9aabfb9b5107d, type: 3}
+  m_Name: DialogMaster
+  m_EditorClassIdentifier: 
+  ID: 1
+  dialogs:
+  - context: "\xDCstad\u0131m sizi g\xF6rmek ne g\xFCzel"
+    Speaker: 0
+  - context: "Lord Berj, Ho\u015Fgeldin uzun zamand\u0131r seni bekliyordum."
+    Speaker: 1
+  - context: "Gelmeni kutlamak isterdim ancak \xDClkemiz tehdit alt\u0131nda..."
+    Speaker: 1
+  - context: "Nas\u0131l Bir tehdit Efendim..."
+    Speaker: 0
+  - context: "\xDClkemizin Bat\u0131s\u0131nda K\xF6ylerimizi ya\u011Fmalayan bir
+      yarat\u0131k var..."
+    Speaker: 1
+  - context: "Onu Ortadan Kald\u0131rman gerek..."
+    Speaker: 1
+  - context: "Hemen \xDCstad\u0131m... Yola Koyuluyorum."
+    Speaker: 0
+  - context: "Yola \xC7\u0131kmadan... Hazineden  Yan\u0131na \u0130htiyac\u0131n
+      kadar para ve yiyecek al."
+    Speaker: 1
+  - context: "Sen yokken Teleport sistemi geli\u015Ftirdik. Bat\u0131ya do\u011Fru
+      devam edersen g\xF6receksin."
+    Speaker: 1
+  - context: "T\xFCnellerde Teleport Tabelalar\u0131n\u0131 takip et."
+    Speaker: 1
+  - context: "Anla\u015F\u0131ld\u0131 \xDCstad\u0131m."
+    Speaker: 0

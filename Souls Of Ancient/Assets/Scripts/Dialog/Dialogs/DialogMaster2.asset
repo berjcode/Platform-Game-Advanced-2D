@@ -10,15 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34be3fbc38a96994faa9aabfb9b5107d, type: 3}
-  m_Name: Dialog 1
+  m_Name: DialogMaster2
   m_EditorClassIdentifier: 
-  ID: 1
+  ID: 2
   dialogs:
-  - context: "Ho\u015Fgeldiniz, sonunda \xDClkenize D\xF6nd\xFCn\xFCz Lordum."
-    Speaker: 1
-  - context: "Asker, Gezegenin her yerinde goblin sald\u0131r\u0131lar\u0131 var.
-      \xDClkemizi korumak i\xE7in d\xF6nd\xFCm."
+  - context: "Yola \xC7\u0131k\u0131yorum efendim..."
     Speaker: 0
-  - context: "Halk\u0131m\u0131z size g\xFCveniyor. \xDCstad sizi T\xFCnelde bekliyor
-      Lordum."
+  - context: "Duam\u0131z seninle Lord Berj..."
     Speaker: 1

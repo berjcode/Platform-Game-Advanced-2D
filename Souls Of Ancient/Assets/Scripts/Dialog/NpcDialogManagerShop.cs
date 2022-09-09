@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NpcDialogManager : MonoBehaviour
+public class NpcDialogManagerShop : MonoBehaviour
 {
     public List<Dialog> npcDialogs = new List<Dialog>();
     public int currentDialog;

@@ -61,14 +61,8 @@ public void NextDialog()
         npc.currentDialogText++;
     }else
     {
-        npc.currentDialogText =0;
-        if(npc.currentDialog < npc.npcDialogs.Count -1)
-        {
-            npc.currentDialog++;
-        }else
-        {
-            dialogUI.SetActive(false);
-        }
+    npc.currentDialogText =0;
+    dialogUI.SetActive(false);
     }
 }
 

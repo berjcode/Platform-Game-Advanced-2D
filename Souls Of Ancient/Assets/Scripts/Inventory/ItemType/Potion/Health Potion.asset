@@ -16,6 +16,6 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: eb78967fe1ef6644e9c632b34cbe0e42, type: 3}
   Name: Health Potion
   stackable: 1
-  cost: 10
+  cost: 250
   itemType: 1
   health: 10
