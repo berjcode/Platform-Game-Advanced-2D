@@ -16,5 +16,6 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: 16606476bd0fb1046bf09251f6aaa9c6, type: 3}
   Name: Bread
   stackable: 1
+  cost: 10
   itemType: 0
   saturation: 10

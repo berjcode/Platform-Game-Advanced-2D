@@ -16,8 +16,11 @@ public class Shop : MonoBehaviour
     public Item currentItem;
     public GameObject Player;
     public GameObject ShopUI;
+  
     public Text ItemName;
     public Image ItemIcon;
+    public Text coinText;
+    public Text coinMagicText;
 
      
 
@@ -27,11 +30,14 @@ public class Shop : MonoBehaviour
          Player = GameObject.FindGameObjectWithTag("Player");
         CreateDisplay();
         ShopUI.SetActive(false);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+       coinText.text = shop_coins + "$";
+       coinMagicText.text = ScoreManager.Instance.playerCoinMagic + "$";
         UpdateDisplay();
     }
 
@@ -92,14 +98,17 @@ public class Shop : MonoBehaviour
         if(currentItem !=null)
         {
                
-          if(currentItem.cost <=Player.GetComponent<PlayerController>().playerCoin)
+          if(currentItem.cost <=ScoreManager.Instance.playerCoinMagic)
           {
+            ScoreManager.Instance.playerCoinMagic -= currentItem.cost; 
+            shop_coins += Player.GetComponent<InventoryUI>().currentItem.cost;
             Player.GetComponent<InventoryUI>()._playerInventory.AddItem(currentItem,1);
             
             if( shopInventory.itemSlot[currentItemIndex].amount ==1)
             {
                 
                  shopInventory.itemSlot[currentItemIndex].UpdateSlot(0,null,0);
+                 currentItem =null;
             }else if( shopInventory.itemSlot[currentItemIndex].amount >1 )
             {
                 shopInventory.itemSlot[currentItemIndex].DecreaseAmount(1);
@@ -116,12 +125,39 @@ public class Shop : MonoBehaviour
         if(col.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.LeftShift))
         {
             ShopUI.SetActive(!ShopUI.activeSelf);
+            
         } 
+    }
+
+    public void Sell()
+    {
+        if(Player.GetComponent<InventoryUI>().currentItem !=null)
+        {
+             if(Player.GetComponent<InventoryUI>().currentItem.cost <=shop_coins)
+          {
+            shopInventory.AddItem(Player.GetComponent<InventoryUI>().currentItem,1);
+           ScoreManager.Instance.playerCoinMagic += Player.GetComponent<InventoryUI>().currentItem.cost; 
+            shop_coins -= Player.GetComponent<InventoryUI>().currentItem.cost;
+            
+            if(Player.GetComponent<InventoryUI>()._playerInventory.itemSlot[currentItemIndex].amount ==1)
+            {
+                
+                 Player.GetComponent<InventoryUI>()._playerInventory.itemSlot[currentItemIndex].UpdateSlot(0,null,0);
+                 Player.GetComponent<InventoryUI>().currentItem = null;
+            }else if( Player.GetComponent<InventoryUI>()._playerInventory.itemSlot[currentItemIndex].amount >1 )
+            {
+                Player.GetComponent<InventoryUI>()._playerInventory.itemSlot[currentItemIndex].DecreaseAmount(1);
+            }
+           
+            }
+            
+        }
     }
 
     public void OnTriggerExit2D(Collider2D col)
     {
         ShopUI.SetActive(false);
+        
     }
           
 }

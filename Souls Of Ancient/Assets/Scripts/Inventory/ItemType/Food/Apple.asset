@@ -16,5 +16,6 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: 90b8ba9dd5b3d3b4592191253f1fb873, type: 3}
   Name: Apple
   stackable: 1
+  cost: 10
   itemType: 0
   saturation: 10

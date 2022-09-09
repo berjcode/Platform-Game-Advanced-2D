@@ -14,5 +14,7 @@ public class ScoreManager : MonoBehaviour
     public Text healthText;
     public float HungerPlayer=100;
    public Text hungerText;
+   public int playerCoinMagic = 100;
+   public Text coinMagicText;
    
 }

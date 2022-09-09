@@ -11,7 +11,8 @@ public class Coin : MonoBehaviour
     {
          if(col.gameObject.tag=="Player")
             {
-                ScoreManager.Instance.HealthPlayer += Random.Range(0,15);
+                ScoreManager.Instance.playerCoinMagic += Random.Range(0,15);
+                ScoreManager.Instance.coinMagicText.text = ScoreManager.Instance.playerCoinMagic.ToString();
              
                 Destroy(gameObject);
             }
