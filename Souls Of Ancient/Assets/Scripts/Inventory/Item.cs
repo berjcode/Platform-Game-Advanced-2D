@@ -8,6 +8,7 @@ public class Item : ScriptableObject
     public Sprite Icon;
     public string Name;
     public bool stackable;
+    public int cost;
 
     public virtual void UseEffect()
     {

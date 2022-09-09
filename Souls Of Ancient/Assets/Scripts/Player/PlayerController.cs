@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private bool isGrounded=true;
     private bool attack;
+    public int playerCoin;
     
 
     private SpriteRenderer _renderer;
