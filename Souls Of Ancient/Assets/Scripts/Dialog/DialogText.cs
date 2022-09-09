@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogText : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+[System.Serializable]
+public class DialogText 
+{
+    public string context;
+    public Speaker Speaker;
+
+}
+
+public enum Speaker
+{
+    Player,
+    Npc
 }

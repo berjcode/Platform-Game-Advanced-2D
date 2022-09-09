@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - GameManager
   - Coin
+  - NPC
   layers:
   - Default
   - TransparentFX

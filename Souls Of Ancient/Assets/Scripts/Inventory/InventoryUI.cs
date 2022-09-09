@@ -83,6 +83,8 @@ public class InventoryUI : MonoBehaviour
             _playerInventory.AddItem(item._item,item.amount);
             Destroy(item.gameObject);
         }
+
+        
     }
 
     public void SelectItem(int index)
