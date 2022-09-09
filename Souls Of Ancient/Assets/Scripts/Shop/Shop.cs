@@ -100,8 +100,8 @@ public class Shop : MonoBehaviour
                
           if(currentItem.cost <=ScoreManager.Instance.playerCoinMagic)
           {
-            ScoreManager.Instance.playerCoinMagic -= currentItem.cost; 
-            shop_coins += Player.GetComponent<InventoryUI>().currentItem.cost;
+             ScoreManager.Instance.playerCoinMagic-= currentItem.cost ;  
+            shop_coins += currentItem.cost;
             Player.GetComponent<InventoryUI>()._playerInventory.AddItem(currentItem,1);
             
             if( shopInventory.itemSlot[currentItemIndex].amount ==1)
@@ -136,17 +136,18 @@ public class Shop : MonoBehaviour
              if(Player.GetComponent<InventoryUI>().currentItem.cost <=shop_coins)
           {
             shopInventory.AddItem(Player.GetComponent<InventoryUI>().currentItem,1);
-           ScoreManager.Instance.playerCoinMagic += Player.GetComponent<InventoryUI>().currentItem.cost; 
-            shop_coins -= Player.GetComponent<InventoryUI>().currentItem.cost;
+              shop_coins -= Player.GetComponent<InventoryUI>().currentItem.cost;
+             ScoreManager.Instance.playerCoinMagic  += Player.GetComponent<InventoryUI>().currentItem.cost; 
+           
             
-            if(Player.GetComponent<InventoryUI>()._playerInventory.itemSlot[currentItemIndex].amount ==1)
+            if(Player.GetComponent<InventoryUI>()._playerInventory.itemSlot[Player.GetComponent<InventoryUI>().currentItemIndex].amount ==1)
             {
                 
-                 Player.GetComponent<InventoryUI>()._playerInventory.itemSlot[currentItemIndex].UpdateSlot(0,null,0);
-                 Player.GetComponent<InventoryUI>().currentItem = null;
-            }else if( Player.GetComponent<InventoryUI>()._playerInventory.itemSlot[currentItemIndex].amount >1 )
+                Player.GetComponent<InventoryUI>()._playerInventory.itemSlot[Player.GetComponent<InventoryUI>().currentItemIndex].UpdateSlot(0,null,0);
+                Player.GetComponent<InventoryUI>().currentItem = null;
+            }else if( Player.GetComponent<InventoryUI>()._playerInventory.itemSlot[Player.GetComponent<InventoryUI>().currentItemIndex].amount >1 )
             {
-                Player.GetComponent<InventoryUI>()._playerInventory.itemSlot[currentItemIndex].DecreaseAmount(1);
+                Player.GetComponent<InventoryUI>()._playerInventory.itemSlot[Player.GetComponent<InventoryUI>().currentItemIndex].DecreaseAmount(1);
             }
            
             }
