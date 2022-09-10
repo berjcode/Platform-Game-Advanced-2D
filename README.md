@@ -12,11 +12,11 @@ Universal RP
 -Teleport System+
 -Checkpoint System +                                                                                                              
 -Character Attack System+  
--Enemy Attack System+ 
-+Dialog System
-+Inventory System
-+Mission System
-+Scriptableobject Class
+-Enemy Attack System+                                                                                      
+-Dialog System+                                                                                         
+-Inventory System+                                                                                  
+ -Mission System+                                                                                  
+-Scriptableobject Class+                                                                                  
 
 
 
