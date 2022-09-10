@@ -3,6 +3,7 @@
  
  a brave warrior defending the last stronghold of his ancestors. The castle will not fall until he dies.
 
+Game Name = Souls Of Ancients :                                                                                                
 Package:
 Universal RP
 
