@@ -18,7 +18,8 @@ Universal RP
 -Dialog System+                                                                                         
 -Inventory System+                                                                                  
  -Mission System+                                                                                  
--Scriptableobject Class+                                                                                  
+-Scriptableobject Class+                                                                                              
+-Interfaces +                                                                              
 
 
 
