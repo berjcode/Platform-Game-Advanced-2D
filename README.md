@@ -3,6 +3,7 @@
  
  a brave warrior defending the last stronghold of his ancestors. The castle will not fall until he dies.
 
+Game Name = Souls Of Ancients :                                                                                                
 Package:
 Universal RP
 
@@ -12,5 +13,13 @@ Universal RP
 -Teleport System+
 -Checkpoint System +                                                                                                              
 -Character Attack System+  
--Enemy Attack System+                                                                                                            
+-Enemy Attack System+                                                                                      
+-Dialog System+                                                                                         
+-Inventory System+                                                                                  
+ -Mission System+                                                                                  
+-Scriptableobject Class+                                                                                  
+
+
+
+
 
